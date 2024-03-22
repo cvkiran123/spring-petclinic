@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal:8.5 as builder
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.15-1.1682053058 as builder
 
 WORKDIR spring-petclinic
 COPY ./src ./src
