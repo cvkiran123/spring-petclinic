@@ -3,8 +3,7 @@ FROM registry.access.redhat.com/ubi8/openjdk-17:1.15-1.1682053058 AS builder
 WORKDIR spring-petclinic
 COPY src src
 COPY pom.xml .
-RUN echo "${pwd}"
-RUN echo "${ls}"
+COPY mvnw mvnw
 RUN ./mvnw package
 
 FROM openjdk:11-jre-slim
