@@ -4,6 +4,8 @@ WORKDIR spring-petclinic
 COPY src src
 COPY pom.xml .
 COPY mvnw mvnw
+COPY .mvn .mvn
+COPY mvnw.cmd mvnw.cmd
 RUN ./mvnw package
 
 FROM openjdk:11-jre-slim
