@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/openjdk-17:1.15-1.1682053058 AS builder
+FROM openjdk-17 AS builder
 
 WORKDIR spring-petclinic
 COPY . .
