@@ -2,7 +2,7 @@ FROM maven:3.6.3-jdk-11-slim AS builder
 
 WORKDIR spring-petclinic
 COPY . .
-RUN mvn clean install -Dmaven.test.skip
+RUN ./mvnw package
 
 
 
