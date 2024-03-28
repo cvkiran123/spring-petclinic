@@ -2,6 +2,7 @@ FROM maven:3.6.3-jdk-11-slim AS builder
 
 WORKDIR spring-petclinic
 COPY . .
+RUN apt-get install maven
 RUN ./mvnw clean package
 
 
