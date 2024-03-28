@@ -2,7 +2,6 @@ FROM maven:3.6.3-jdk-11-slim AS builder
 
 WORKDIR spring-petclinic
 COPY . .
-RUN ./mvnw dependency:go-offline
 RUN mvn clean install -Dmaven.test.skip
 
 
