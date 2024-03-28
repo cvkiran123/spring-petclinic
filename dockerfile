@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/openjdk-17:1.19-1  AS builder
+FROM maven:3.6.3-jdk-11-slim AS builder
 
 WORKDIR spring-petclinic
 COPY . .
