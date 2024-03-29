@@ -1,6 +1,7 @@
 FROM registry.access.redhat.com/ubi8/openjdk-17:1.19-1 AS builder
 
 WORKDIR spring-petclinic
+RUN mkdir -p /spring-petclinic  # Create the directory if it doesn't exist
 COPY . .
 RUN chmod 755 /spring-petclinic
 RUN ./mvnw clean package -Dcheckstyle.skip
