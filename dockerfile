@@ -1,11 +1,8 @@
 FROM maven:3.6.3-jdk-11-slim AS builder
 
 WORKDIR spring-petclinic
-COPY . .
-RUN apt-get install maven
+COPY . ./spring-petclinic
 RUN ./mvnw clean package
-
-
 
 FROM openjdk:11-jre-slim
 COPY --from=builder target/*.jar /spring-petclinic/*.jar
