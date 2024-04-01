@@ -7,7 +7,8 @@ COPY . .
 #RUN chmod 755 /spring-petclinic
 RUN ./mvnw clean package -Dcheckstyle.skip
 
+
 FROM openjdk:11-jre-slim
-COPY --from=builder target/*.jar /spring-petclinic/*.jar
+COPY --from=builder /spring-petclinic/target/*.jar /target/*.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","target/*.jar"]
