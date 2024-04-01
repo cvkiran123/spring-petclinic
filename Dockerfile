@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/openjdk-17:1.19-1 AS builder
 
-RUN mkdir /home/spring-petclinic
+#RUN mkdir /home/spring-petclinic
 WORKDIR /spring-petclinic
 COPY . .
 #RUN chmod 755 /spring-petclinic
